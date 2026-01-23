@@ -3,6 +3,16 @@ import pandas as pd
 import plotly.express as px
 import random
 import time
+import googleapiclient.discovery
+
+# =====================================================
+# CONFIG
+# =====================================================
+YOUTUBE_API_KEY = "AIzaSyDbbn1H1GcuMKXMhhRl-wnld7KOz_JLTl4"
+
+youtube = googleapiclient.discovery.build(
+    "youtube", "v3", developerKey=YOUTUBE_API_KEY
+)
 
 # =====================================================
 # PAGE CONFIG
@@ -22,67 +32,34 @@ BIHAR_DISTRICTS = [
 ]
 
 st.title("Bihar Land Trends 2026")
-st.markdown("**Google + YouTube + Peak Hours (Human Search Behaviour)**")
+st.markdown("**Google + YouTube + Peak Hours (LIVE KEYWORDS)**")
 
 tab1, tab2, tab3, tab4 = st.tabs(["🔍 Google", "🎥 YouTube", "📝 Keywords", "🥇 Ranking"])
 
 # =====================================================
-# HUMAN-LIKE KEYWORD GENERATORS
+# 🔍 FETCH REAL YOUTUBE KEYWORDS
 # =====================================================
-def land_keywords(d):
-    sizes = ["80 gaj", "100 gaj", "120 gaj", "150 gaj", "200 gaj"]
-    budgets = ["under 5 lakh", "under 10 lakh", "low budget", "best price", "cheap rate"]
-    intents = [
-        "best area to buy plot in",
-        "safe place to buy land in",
-        "future growth area in",
-        "new residential plots in",
-        "where to invest in property in"
-    ]
-    questions = [
-        "zameen kharidna sahi rahega kya",
-        "registry ka pura process kya hai",
-        "circle rate kitna chal raha hai",
-        "gaon me plot lena safe hai kya"
-    ]
+def fetch_youtube_keywords(query):
+    try:
+        res = youtube.search().list(
+            q=query,
+            part="snippet",
+            maxResults=5,
+            type="video"
+        ).execute()
 
-    return list({
-        f"{random.choice(sizes)} plot for sale in {d}",
-        f"{d} land price today 2026",
-        f"{random.choice(budgets)} plot in {d}",
-        f"{random.choice(intents)} {d}",
-        f"{d} me {random.choice(questions)}",
-        f"residential land near highway in {d}",
-        f"{d} property investment guide",
-        f"ready to registry plot in {d}"
-    })
+        words = []
 
-def yt_keywords(d):
-    styles = ["full review", "site visit", "ground reality", "latest update", "detailed guide"]
-    topics = ["land price", "plot buying process", "property market", "real estate investment", "registry process"]
-    doubts = ["safe or not", "scam se kaise bache", "kharidne se pehle kya check kare", "future price badhega kya"]
+        for item in res["items"]:
+            title = item["snippet"]["title"]
+            words.extend(title.split())
 
-    return list({
-        f"{d} {random.choice(topics)} {random.choice(styles)}",
-        f"buy plot in {d} {random.choice(doubts)}",
-        f"{d} land {random.choice(styles)} vlog",
-        f"{d} property market {random.choice(styles)}",
-        f"step by step plot registry in {d}",
-        f"{d} me plot lene ka experience",
-        f"is {d} good for land investment",
-        f"{d} real estate ground report"
-    })
+        # Clean words
+        keywords = list(set(w.lower() for w in words if len(w) > 4))
+        return ", ".join(keywords[:8])
 
-def human_search_style(d):
-    return random.choice([
-        f"best plot in {d}",
-        f"{random.choice(['100','120','150','200'])} gaj plot in {d}",
-        f"cheap land near {d} town",
-        f"{d} land price kya chal raha hai",
-        f"plot lena sahi rahega kya in {d}",
-        f"property investment in {d} safe hai kya",
-        f"{d} registry ka process kya hai"
-    ])
+    except:
+        return "No data"
 
 # =====================================================
 # HELPERS
@@ -104,13 +81,17 @@ def clean_chart(fig):
     fig.update_traces(marker_line_width=0)
     fig.update_xaxes(showgrid=False, zeroline=False, showline=False, ticks=None)
     fig.update_yaxes(showgrid=False, zeroline=False, showline=False, ticks=None)
-    fig.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
-                      bargap=0.25, legend=dict(orientation="h", y=1.08, x=0.5, xanchor="center"),
-                      margin=dict(l=20, r=20, t=40, b=20))
+    fig.update_layout(
+        plot_bgcolor="rgba(0,0,0,0)",
+        paper_bgcolor="rgba(0,0,0,0)",
+        bargap=0.25,
+        legend=dict(orientation="h", y=1.08, x=0.5, xanchor="center"),
+        margin=dict(l=20, r=20, t=40, b=20)
+    )
     return fig
 
 # =====================================================
-# TAB 1 – GOOGLE
+# TAB 1 – GOOGLE (Using YouTube intent keywords)
 # =====================================================
 with tab1:
     st.header("🔍 Google Trends")
@@ -124,17 +105,17 @@ with tab1:
             if d in ["Patna","Muzaffarpur","Gaya","East Champaran","Saran"]:
                 score = min(100, score + 15)
 
+            keywords = fetch_youtube_keywords(f"{d} land price")
+
             rows.append({
                 "District": d,
                 "Google_Score": score,
-                "Google_Keywords": ", ".join(land_keywords(d)),
-                "Search Style (How users type)": human_search_style(d),
+                "Google_Keywords": keywords,
                 "Peak_Hour": peak_hour(score),
                 "Trend": trend(score)
             })
 
             progress.progress((i + 1) / len(BIHAR_DISTRICTS))
-            time.sleep(0.03)
 
         st.session_state.google = pd.DataFrame(rows)
         st.success("✅ Google Data Loaded")
@@ -156,11 +137,12 @@ with tab2:
             if d in ["Patna","Muzaffarpur","Gaya","East Champaran","Saran"]:
                 score = min(100, score + 20)
 
+            keywords = fetch_youtube_keywords(f"{d} property review")
+
             rows.append({
                 "District": d,
                 "YT_Score": score,
-                "YouTube_Keywords": ", ".join(yt_keywords(d)),
-                "Search Style (How users type)": human_search_style(d),
+                "YouTube_Keywords": keywords,
                 "Peak_Hour": peak_hour(score),
                 "Trend": trend(score)
             })
@@ -178,16 +160,14 @@ with tab3:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.subheader("🔍 Google Search Behaviour")
+        st.subheader("🔍 Google Keywords")
         if "google" in st.session_state:
-            st.dataframe(st.session_state.google[["District","Google_Keywords","Search Style (How users type)"]],
-                         use_container_width=True)
+            st.dataframe(st.session_state.google[["District","Google_Keywords"]], use_container_width=True)
 
     with col2:
-        st.subheader("🎥 YouTube Search Behaviour")
+        st.subheader("🎥 YouTube Keywords")
         if "youtube" in st.session_state:
-            st.dataframe(st.session_state.youtube[["District","YouTube_Keywords","Search Style (How users type)"]],
-                         use_container_width=True)
+            st.dataframe(st.session_state.youtube[["District","YouTube_Keywords"]], use_container_width=True)
 
 # =====================================================
 # TAB 4 – RANKING
@@ -202,7 +182,7 @@ with tab4:
         st.dataframe(df.sort_values("Total_Score", ascending=False).head(15), use_container_width=True)
 
 # =====================================================
-# CHARTS
+# CLEAN CHARTS
 # =====================================================
 st.markdown("---")
 st.subheader("📊 ALL 38 DISTRICTS")
@@ -222,4 +202,4 @@ if "google" in st.session_state and "youtube" in st.session_state:
                       orientation="h", height=1000, title="YouTube – All Districts")
         st.plotly_chart(clean_chart(fig2), use_container_width=True)
 
-st.success("🎉 HUMAN SEARCH BEHAVIOUR ADDED | REALISTIC KEYWORDS | SMART RANKING")
+st.success("🎉 LIVE KEYWORDS ENABLED | REAL YOUTUBE DATA")
