@@ -1,0 +1,52 @@
+============== REAL-TIME SALES PERFORMANCE ANALYSIS REPORT ==============
+
+Promoter Name: A ONE BUILDERS DEVELOPERS
+------------------------------------------------------------------
+Trust Score: -21.88
+Risk Score: 5
+Estimated Sales Probability: 75%
+
+• Trust level needs improvement due to negative feedback or disputes.
+• Higher financial/delay/quality complaints increasing perceived risk.
+• High probability of sustained sales growth.
+
+Recommended Actions:
+- Improve agreement transparency.
+- Strengthen timeline management.
+- Enhance construction quality monitoring.
+- Maintain proactive customer communication.
+=====================================================================
+
+Promoter Name: PARI CONSTRUCTION AND DEVELOPER
+------------------------------------------------------------------
+Trust Score: -29.38
+Risk Score: 4
+Estimated Sales Probability: 80%
+
+• Trust level needs improvement due to negative feedback or disputes.
+• Higher financial/delay/quality complaints increasing perceived risk.
+• High probability of sustained sales growth.
+
+Recommended Actions:
+- Improve agreement transparency.
+- Strengthen timeline management.
+- Enhance construction quality monitoring.
+- Maintain proactive customer communication.
+=====================================================================
+
+Promoter Name: R.D.ECO DEVELOPERS PVT. LTD.
+------------------------------------------------------------------
+Trust Score: -4.38
+Risk Score: 4
+Estimated Sales Probability: 80%
+
+• Trust level needs improvement due to negative feedback or disputes.
+• Higher financial/delay/quality complaints increasing perceived risk.
+• High probability of sustained sales growth.
+
+Recommended Actions:
+- Improve agreement transparency.
+- Strengthen timeline management.
+- Enhance construction quality monitoring.
+- Maintain proactive customer communication.
+=====================================================================

@@ -1,0 +1,25 @@
+Project Name,Registration No,Promoter Name,Comment,Sentiment Score,Sentiment Label,Financial Issue,Delay Issue,Quality Issue,Trust Issue,Paying Capacity,Buyer Type
+A M PINNACLE,BRERAP00427-9/155/R-1663/2024,R.D.ECO DEVELOPERS PVT. LTD.,Good reputation as a builder.,1,Positive,0,0,0,0,Budget Segment,General Buyer
+A M PINNACLE,BRERAP00427-9/155/R-1663/2024,R.D.ECO DEVELOPERS PVT. LTD.,Completed on time and within budget.,1,Positive,0,0,0,0,Budget Segment,General Buyer
+A M PINNACLE,BRERAP00427-9/155/R-1663/2024,R.D.ECO DEVELOPERS PVT. LTD.,Value for money project.,1,Positive,1,0,0,0,Middle Income,Investment Buyer
+A M PINNACLE,BRERAP00427-9/155/R-1663/2024,R.D.ECO DEVELOPERS PVT. LTD.,Advance refund not returned.,-3,Negative,1,0,0,0,Budget Segment,General Buyer
+A M PINNACLE,BRERAP00427-9/155/R-1663/2024,R.D.ECO DEVELOPERS PVT. LTD.,Outstanding craftsmanship.,1,Positive,0,0,1,0,High Income,General Buyer
+A M PINNACLE,BRERAP00427-9/155/R-1663/2024,R.D.ECO DEVELOPERS PVT. LTD.,Worst build quality.,0,Neutral,0,0,1,0,High Income,General Buyer
+A M PINNACLE,BRERAP00427-9/155/R-1663/2024,R.D.ECO DEVELOPERS PVT. LTD.,Workmanship impeccable.,1,Positive,0,0,0,0,Budget Segment,General Buyer
+A M PINNACLE,BRERAP00427-9/155/R-1663/2024,R.D.ECO DEVELOPERS PVT. LTD.,Eco-friendly development approach.,1,Positive,0,0,0,0,Budget Segment,General Buyer
+A ONE HERITAGE,BRERAP00923-1/607/R-783/2019,A ONE BUILDERS DEVELOPERS,Professional and attentive team.,1,Positive,0,0,0,1,Budget Segment,General Buyer
+A ONE HERITAGE,BRERAP00923-1/607/R-783/2019,A ONE BUILDERS DEVELOPERS,Lot of work pending.,-1,Negative,0,1,0,0,Budget Segment,General Buyer
+A ONE HERITAGE,BRERAP00923-1/607/R-783/2019,A ONE BUILDERS DEVELOPERS,Advance refund not returned.,-3,Negative,1,0,0,0,Budget Segment,General Buyer
+A ONE HERITAGE,BRERAP00923-1/607/R-783/2019,A ONE BUILDERS DEVELOPERS,Extra money charged for parking.,-1,Negative,1,0,0,0,Budget Segment,General Buyer
+A ONE HERITAGE,BRERAP00923-1/607/R-783/2019,A ONE BUILDERS DEVELOPERS,No response after taking money.,-1,Negative,1,0,0,1,Budget Segment,General Buyer
+A ONE HERITAGE,BRERAP00923-1/607/R-783/2019,A ONE BUILDERS DEVELOPERS,Workmanship impeccable.,1,Positive,0,0,0,0,Budget Segment,General Buyer
+A ONE HERITAGE,BRERAP00923-1/607/R-783/2019,A ONE BUILDERS DEVELOPERS,Eco-friendly development approach.,1,Positive,0,0,0,0,Budget Segment,General Buyer
+A ONE HERITAGE,BRERAP00923-1/607/R-783/2019,A ONE BUILDERS DEVELOPERS,High-quality materials used.,1,Positive,0,0,1,0,High Income,General Buyer
+A.R GREEN CITY,BRERAP14746-5/100/R-1767/2024,PARI CONSTRUCTION AND DEVELOPER,No response after taking money.,-1,Negative,1,0,0,1,Budget Segment,General Buyer
+A.R GREEN CITY,BRERAP14746-5/100/R-1767/2024,PARI CONSTRUCTION AND DEVELOPER,Damp walls and no waterproof roof.,-2,Negative,0,0,1,0,Budget Segment,General Buyer
+A.R GREEN CITY,BRERAP14746-5/100/R-1767/2024,PARI CONSTRUCTION AND DEVELOPER,Project not completed on time.,-1,Negative,0,1,0,0,Budget Segment,General Buyer
+A.R GREEN CITY,BRERAP14746-5/100/R-1767/2024,PARI CONSTRUCTION AND DEVELOPER,Eco-friendly development approach.,1,Positive,0,0,0,0,Budget Segment,General Buyer
+A.R GREEN CITY,BRERAP14746-5/100/R-1767/2024,PARI CONSTRUCTION AND DEVELOPER,No clarity in agreement.,-1,Negative,0,0,0,1,Budget Segment,General Buyer
+A.R GREEN CITY,BRERAP14746-5/100/R-1767/2024,PARI CONSTRUCTION AND DEVELOPER,High-quality materials used.,1,Positive,0,0,1,0,High Income,General Buyer
+A.R GREEN CITY,BRERAP14746-5/100/R-1767/2024,PARI CONSTRUCTION AND DEVELOPER,Lot of work pending.,-1,Negative,0,1,0,0,Budget Segment,General Buyer
+A.R GREEN CITY,BRERAP14746-5/100/R-1767/2024,PARI CONSTRUCTION AND DEVELOPER,Good reputation as a builder.,1,Positive,0,0,0,0,Budget Segment,General Buyer

@@ -1,0 +1,25 @@
+Project Name,Promoter Name,Comment,Sentiment Score,Sentiment Label,Financial Issue Flag,Delay Flag,Quality Flag,Trust Flag,Paying Capacity Segment,Buyer Type
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Professional and attentive team.,1,Positive,0,0,0,1,Budget Segment,General Buyer
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,High-quality materials used.,1,Positive,0,0,1,0,High Income,General Buyer
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Supportive staff and good communication.,2,Positive,0,0,0,1,Budget Segment,General Buyer
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Extra money charged for parking.,-1,Negative,1,0,0,0,Middle Income,General Buyer
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Flat location is very good with amenities.,1,Positive,0,0,0,0,Budget Segment,Self-Use Buyer
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Worst build quality.,0,Neutral,0,0,1,0,High Income,General Buyer
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Workmanship impeccable.,1,Positive,0,0,0,0,Budget Segment,General Buyer
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Eco-friendly development approach.,1,Positive,0,0,0,0,Budget Segment,General Buyer
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,Flat location is very good with amenities.,1,Positive,0,0,0,0,Budget Segment,Self-Use Buyer
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,Workmanship impeccable.,1,Positive,0,0,0,0,Budget Segment,General Buyer
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,Damp walls and no waterproof roof.,-2,Negative,0,0,1,0,Budget Segment,General Buyer
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,Value for money project.,1,Positive,1,0,0,0,Middle Income,Investment Buyer
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,Work incomplete even after payment.,-1,Negative,0,1,0,0,Budget Segment,General Buyer
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,Supportive staff and good communication.,2,Positive,0,0,0,1,Budget Segment,General Buyer
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,Completed on time and within budget.,1,Positive,0,0,0,0,Budget Segment,General Buyer
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,Advance refund not returned.,-3,Negative,1,0,0,0,Budget Segment,General Buyer
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,No clarity in agreement.,-1,Negative,0,0,0,1,Budget Segment,General Buyer
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,Work incomplete even after payment.,-1,Negative,0,1,0,0,Budget Segment,General Buyer
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,Eco-friendly development approach.,1,Positive,0,0,0,0,Budget Segment,General Buyer
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,Flat location is very good with amenities.,1,Positive,0,0,0,0,Budget Segment,Self-Use Buyer
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,Good reputation as a builder.,1,Positive,0,0,0,0,Budget Segment,General Buyer
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,Lot of work pending.,-1,Negative,0,1,0,0,Budget Segment,General Buyer
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,Value for money project.,1,Positive,1,0,0,0,Middle Income,Investment Buyer
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,Workmanship impeccable.,1,Positive,0,0,0,0,Budget Segment,General Buyer

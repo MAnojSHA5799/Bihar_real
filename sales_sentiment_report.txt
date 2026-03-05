@@ -1,0 +1,32 @@
+
+SENTIMENT BASED PLOT SALES ANALYSIS REPORT
+
+Based on customer review analysis, total Positive Reviews: 14
+Total Negative Reviews: 9
+
+Plot sales are increasing where buyers highlight:
+- Good location and amenities
+- Professional and supportive staff
+- Value for money pricing
+- Eco-friendly and quality construction
+- Timely completion of projects
+
+These positive sentiments increase buyer trust, improve brand reputation,
+and encourage word-of-mouth marketing which directly supports sales growth.
+
+However, plot sales are getting affected due to:
+- Project delays and incomplete construction
+- Pending work after payment
+- Refund related complaints
+- Extra charges not mentioned clearly
+- Poor build quality like damp walls and leakage
+
+Negative sentiment reduces customer trust and creates hesitation among
+new buyers. Financial transparency and timely delivery are critical
+factors influencing purchasing decisions.
+
+Conclusion:
+Sales are strong where trust, quality, and communication are maintained.
+Sales decline where delays, poor quality, and financial disputes occur.
+Improving transparency, after-sale service, and construction quality
+can significantly improve future plot sales performance.

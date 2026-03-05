@@ -1,0 +1,31 @@
+ITR_Form_Code,Detected_Location,Keyword_Volume,ITR_Description,Market_Share_%,Rank
+GENERAL,Bangalore,19,Generic ITR Queries,0.84,1
+GENERAL,Delhi,18,Generic ITR Queries,0.8,2
+GENERAL,Hyderabad,15,Generic ITR Queries,0.66,3
+GENERAL,Pune,15,Generic ITR Queries,0.66,3
+GENERAL,Chennai,14,Generic ITR Queries,0.62,4
+GENERAL,Lucknow,13,Generic ITR Queries,0.58,5
+GENERAL,Mumbai,13,Generic ITR Queries,0.58,5
+GENERAL,Noida,13,Generic ITR Queries,0.58,5
+GENERAL,Ahmedabad,11,Generic ITR Queries,0.49,6
+GENERAL,Kolkata,11,Generic ITR Queries,0.49,6
+GENERAL,Kanpur,10,Generic ITR Queries,0.44,7
+GENERAL,Jaipur,9,Generic ITR Queries,0.4,8
+GENERAL,Dehradun,8,Generic ITR Queries,0.35,9
+GENERAL,Gurgaon,8,Generic ITR Queries,0.35,9
+GENERAL,Chandigarh,7,Generic ITR Queries,0.31,10
+GENERAL,Patna,6,Generic ITR Queries,0.27,11
+GENERAL,Ranchi,6,Generic ITR Queries,0.27,11
+GENERAL,Raipur,4,Generic ITR Queries,0.18,12
+GENERAL,Bengaluru,3,Generic ITR Queries,0.13,13
+GENERAL,Bhopal,3,Generic ITR Queries,0.13,13
+CA_CONSULTANT,Bangalore,2,CA Services Demand,0.09,14
+DEADLINE_PANIC,Delhi,2,Urgent/Deadline Queries,0.09,14
+ONLINE_PORTAL,Chandigarh,1,"Online Tools (ClearTax, eFiling)",0.04,15
+TIME_MORNING_PEAK,Dehradun,1,Other,0.04,15
+ITR1_SAHAAJ,Delhi,1,"ITR-1 Sahaj (Salaried <= Rs50L, 1 House)",0.04,15
+CA_CONSULTANT,Hyderabad,1,CA Services Demand,0.04,15
+DEADLINE_PANIC,Mumbai,1,Urgent/Deadline Queries,0.04,15
+CA_CONSULTANT,Noida,1,CA Services Demand,0.04,15
+CA_CONSULTANT,Pune,1,CA Services Demand,0.04,15
+ONLINE_PORTAL,Pune,1,"Online Tools (ClearTax, eFiling)",0.04,15

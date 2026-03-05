@@ -1,0 +1,25 @@
+Project Name,Promoter Name,Comment,Sentiment Score,Sentiment Label,Financial Issue,Delay Issue,Quality Issue
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Completed on time and within budget.,1,Positive,0,0,0
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Lot of work pending.,-1,Negative,0,1,0
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Professional and attentive team.,1,Positive,0,0,0
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Value for money project.,1,Positive,1,0,0
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Advance refund not returned.,-3,Negative,1,0,0
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Construction lapses reported.,-1,Negative,0,0,0
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Good reputation as a builder.,1,Positive,0,0,0
+A M PINNACLE,R.D.ECO DEVELOPERS PVT. LTD.,Work incomplete even after payment.,-1,Negative,0,1,0
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,Construction lapses reported.,-1,Negative,0,0,0
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,High-quality materials used.,1,Positive,0,0,1
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,Completed on time and within budget.,1,Positive,0,0,0
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,Work incomplete even after payment.,-1,Negative,0,1,0
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,No response after taking money.,-1,Negative,1,0,0
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,Eco-friendly development approach.,1,Positive,0,0,0
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,No clarity in agreement.,-1,Negative,0,0,0
+A ONE HERITAGE,A ONE BUILDERS DEVELOPERS,Lot of work pending.,-1,Negative,0,1,0
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,No clarity in agreement.,-1,Negative,0,0,0
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,Extra money charged for parking.,-1,Negative,1,0,0
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,Damp walls and no waterproof roof.,-2,Negative,0,0,1
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,High-quality materials used.,1,Positive,0,0,1
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,Eco-friendly development approach.,1,Positive,0,0,0
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,Worst build quality.,0,Neutral,0,0,1
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,Outstanding craftsmanship.,1,Positive,0,0,1
+A.R GREEN CITY,PARI CONSTRUCTION AND DEVELOPER,Flat location is very good with amenities.,1,Positive,0,0,0

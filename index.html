@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinkcity Developers - IIT Patna Bihta Ad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap');
+        
+        body { font-family: 'Poppins', sans-serif; background-color: #050505; color: #fff; margin: 0; overflow: hidden; }
+
+        /* Cinematic Drone & Walkthrough Animations */
+        @keyframes cinematicPan { 
+            0% { transform: scale(1.1) translateX(-5%); } 
+            50% { transform: scale(1.05) translateX(0); }
+            100% { transform: scale(1.2) translateX(5%); } 
+        }
+        
+        @keyframes floatText { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        @keyframes slideInUp { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+        .cinematic-bg { animation: cinematicPan 30s ease-in-out infinite alternate; filter: contrast(110%) saturate(110%); }
+        .blink-anim { animation: blink 1s infinite; }
+        .form-pop { animation: slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        
+        .glass-dark { background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gold-glow { text-shadow: 0 0 15px rgba(251, 191, 36, 0.6); color: #fbbf24; }
+        .pink-gradient { background: linear-gradient(to right, #ec4899, #be185d); }
+        
+        .screen { display: none; position: absolute; inset: 0; flex-direction: column; justify-content: center; align-items: center; padding: 2rem; z-index: 10; opacity: 0; transition: opacity 0.8s ease-in-out; }
+        .screen.active { display: flex; opacity: 1; }
+
+        input, select { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 12px; padding: 14px; width: 100%; font-size: 0.9rem; transition: all 0.3s; }
+        input:focus { border-color: #ec4899; outline: none; background: rgba(255,255,255,0.1); }
+        
+        .amenity-card { background: rgba(255,255,255,0.03); border-left: 3px solid #ec4899; padding: 10px; border-radius: 8px; font-size: 0.7rem; font-weight: bold; }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+
+    <div id="main-container" class="relative w-full max-w-md aspect-[9/16] overflow-hidden bg-black shadow-2xl">
+        
+        <!-- VISUAL LAYER -->
+        <div class="absolute inset-0 z-0">
+            <div id="loader" class="absolute inset-0 flex flex-col items-center justify-center z-[200] bg-zinc-950">
+                <div class="w-14 h-14 border-4 border-pink-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+                <p class="text-zinc-400 text-[10px] tracking-[0.3em] uppercase font-bold">4K On-Site Footage Loading...</p>
+            </div>
+            <img id="bg-visual" class="cinematic-bg w-full h-full object-cover hidden" alt="IIT Patna Bihta Site">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90"></div>
+        </div>
+
+        <!-- Audio Button -->
+        <button id="audio-toggle" class="absolute top-8 right-8 z-[150] bg-black/60 p-4 rounded-full text-white backdrop-blur-xl hidden border border-white/20">
+            <svg id="speaker-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+        </button>
+
+        <!-- STAGE 1: BRANDING -->
+        <div id="s1" class="screen active">
+            <div class="text-center">
+                <div class="w-20 h-1 bg-pink-500 mx-auto mb-6"></div>
+                <h1 class="text-5xl font-black italic tracking-tighter text-white mb-2" style="font-family: 'Montserrat';">PINKCITY</h1>
+                <h2 class="text-2xl font-bold tracking-[0.3em] text-pink-500">DEVELOPERS</h2>
+                <p class="mt-12 text-zinc-400 text-[10px] tracking-widest uppercase">Premium Township Project</p>
+            </div>
+        </div>
+
+        <!-- STAGE 2: HEADLINE -->
+        <div id="s2" class="screen">
+            <div class="text-center px-4">
+                <h2 class="text-4xl font-black leading-none mb-6">IIT Patna Bihta,<br><span class="text-pink-500">के पास</span></h2>
+                <div class="glass-dark p-6 rounded-3xl border-t-2 border-pink-500">
+                    <p class="text-lg font-medium leading-relaxed">ग्रेटर पटना में Township में आवासीय जमीन खरीदने का सुनहरा अवसर</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- STAGE 3: INVESTMENT -->
+        <div id="s3" class="screen">
+            <div class="space-y-6 w-full px-6">
+                <div class="bg-white text-black p-6 rounded-[30px] shadow-2xl transform -rotate-2">
+                    <p class="text-3xl font-black">💰 3 साल में निवेश <span class="text-pink-600">दोगुना</span></p>
+                </div>
+                <div class="bg-pink-600 text-white p-6 rounded-[30px] shadow-2xl transform rotate-1">
+                    <p class="text-2xl font-black">🔁 Buyback Policy Available</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- STAGE 4: PRICING -->
+        <div id="s4" class="screen">
+            <div class="text-center">
+                <h3 class="text-6xl font-black gold-glow mb-2">₹1299</h3>
+                <span class="bg-red-600 text-[10px] font-bold px-3 py-1 rounded">per sqft</span>
+                <p class="text-white text-sm mt-6 font-medium italic">"अच्छे प्लॉट जिनका दाम लगातार बढ़ रहा है।"</p>
+                <div class="mt-12 bg-red-600 text-white px-6 py-3 rounded-full font-black text-sm blink-anim">
+                    🔴 HURRY UP – LIMITED PLOTS
+                </div>
+            </div>
+        </div>
+
+        <!-- STAGE 5: AMENITIES -->
+        <div id="s5" class="screen">
+            <div class="w-full px-4">
+                <h4 class="text-center text-pink-500 font-black text-xs uppercase tracking-[0.3em] mb-8">Modern Amenities</h4>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="amenity-card">⚡ ELECTRICITY</div>
+                    <div class="amenity-card">💧 WATER SUPPLY</div>
+                    <div class="amenity-card">💡 STREET LIGHT</div>
+                    <div class="amenity-card">🛣 30/20 FT ROAD</div>
+                    <div class="amenity-card">🚰 DRAINAGE SYSTEM</div>
+                    <div class="amenity-card">🔐 24/7 SECURITY</div>
+                    <div class="amenity-card">🛕 TEMPLE</div>
+                    <div class="amenity-card">🏢 COMMUNITY HALL</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STAGE 6: INTERACTIVE FORM (MANDATORY STOP) -->
+        <div id="s6" class="screen items-end justify-end p-0">
+            <div class="form-pop glass-dark w-full rounded-t-[40px] p-8 border-t-4 border-pink-600 flex flex-col">
+                <div class="text-center mb-6">
+                    <h4 class="text-xl font-black text-white italic">📩 Enquiry Form</h4>
+                    <p class="text-zinc-400 text-[10px] mt-1 font-bold uppercase tracking-widest">Book Free Site Visit</p>
+                </div>
+                
+                <form id="enquiry-form" class="space-y-4">
+                    <input type="text" id="name" placeholder="Apka Naam" required>
+                    <input type="tel" id="phone" placeholder="Mobile Number" required>
+                    <select id="interest">
+                        <option value="site-visit">Free Site Visit Book Karein</option>
+                        <option value="price-list">Price List Chahiye</option>
+                        <option value="callback">Callback Request</option>
+                    </select>
+                    <button type="submit" class="w-full pink-gradient text-white font-black py-4 rounded-xl shadow-lg active:scale-95 transition-all uppercase text-xs tracking-widest mt-2">
+                        Submit Details to Proceed
+                    </button>
+                </form>
+
+                <div id="success-overlay" class="hidden absolute inset-0 bg-zinc-950 flex flex-col items-center justify-center p-8 text-center rounded-t-[40px] z-[200]">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <h5 class="text-xl font-bold text-white">Shukriya!</h5>
+                    <p class="text-zinc-400 text-sm mt-2">Details submit ho gayi hain. Final details load ho rahi hain...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- STAGE 7: FINAL CTA -->
+        <div id="s7" class="screen">
+            <div class="glass-dark p-8 rounded-[40px] w-full text-center border border-white/10">
+                <h2 class="text-white text-2xl font-black mb-6 uppercase tracking-tighter">Contact for More Info</h2>
+                
+                <div class="bg-pink-600 p-6 rounded-3xl mb-8">
+                    <p class="text-white/70 text-[10px] font-bold uppercase mb-2">Call Now</p>
+                    <a href="tel:9304993560" class="flex items-center justify-center space-x-3 text-3xl font-black tracking-tighter">
+                        <svg class="blink-anim" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z"/></svg>
+                        <span>93049 93560</span>
+                    </a>
+                </div>
+
+                <div class="text-[10px] text-zinc-500 leading-relaxed uppercase tracking-widest">
+                    <p class="font-bold text-white mb-2 underline decoration-pink-500">Office Address</p>
+                    408, 4th Floor, RC Western Mall,<br>RPS More, Saguna, Patna
+                </div>
+            </div>
+            
+            <button onclick="window.location.reload()" class="mt-10 text-zinc-600 text-[10px] font-bold uppercase tracking-[0.4em] hover:text-white transition-colors">Replay Ad ↺</button>
+        </div>
+
+        <!-- Lower Third Banner -->
+        <div class="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-black to-transparent z-[80] flex items-center px-8">
+            <p id="lower-third" class="text-[9px] font-black uppercase tracking-[0.2em] text-white/40">IIT PATNA BIHTA • PINKCITY DEVELOPERS</p>
+        </div>
+
+    </div>
+
+    <script>
+        const apiKey = "";
+        let audioCtx = null;
+        let sequenceStep = 0;
+        let isFormSubmitted = false;
+
+        async function fetchWithRetry(url, options, retries = 5, backoff = 1000) {
+            try {
+                const response = await fetch(url, options);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return await response.json();
+            } catch (error) {
+                if (retries > 0) {
+                    await new Promise(r => setTimeout(r, backoff));
+                    return fetchWithRetry(url, options, retries - 1, backoff * 2);
+                }
+                throw error;
+            }
+        }
+
+        async function initAd() {
+            try {
+                const imgPrompt = "Cinematic 4K hyper-realistic drone POV of a sprawling residential township site in Bihta Patna near IIT. Wide 30ft concrete internal roads, visible plot markings, lush green Bihar landscape, golden hour sunlight, professional real estate photography style.";
+                
+                const imgData = await fetchWithRetry(`https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ instances: [{ prompt: imgPrompt }], parameters: { sampleCount: 1 } })
+                });
+
+                if (imgData?.predictions?.[0]) {
+                    const bg = document.getElementById('bg-visual');
+                    bg.src = `data:image/png;base64,${imgData.predictions[0].bytesBase64Encoded}`;
+                    bg.classList.remove('hidden');
+                }
+
+                const script = "Namaste! Pinkcity Developers lekar aaye hain IIT Patna, Bihta ke paas Greater Patna ki sabse behtarin township. Ye hai nivesh ka sabse sunhara mauka jahan aapka paisa sirf teen saal mein doguna ho sakta hai. Matra barah sau ninyanve rupaye prati square feet mein payein bijli, paani, aur security jaisi suvidhayein. Plots limited hain, aaj hi apni details fill karein aur site visit book karein. Pinkcity Developers - Bihar ka bharosa.";
+                
+                const ttsData = await fetchWithRetry(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: `Deep, energetic Hindi male real estate expert voice: ${script}` }] }],
+                        generationConfig: {
+                            responseModalities: ["AUDIO"],
+                            speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: "Puck" } } }
+                        },
+                        model: "gemini-2.5-flash-preview-tts"
+                    })
+                });
+
+                if (ttsData?.candidates?.[0]?.content?.parts?.[0]?.inlineData) {
+                    prepareAudio(ttsData.candidates[0].content.parts[0].inlineData.data);
+                }
+
+                document.getElementById('loader').classList.add('hidden');
+                document.getElementById('audio-toggle').classList.remove('hidden');
+                startVideoSequence();
+
+            } catch (err) {
+                console.error("Ad Load Failed", err);
+            }
+        }
+
+        function startVideoSequence() {
+            const stages = ['s1', 's2', 's3', 's4', 's5', 's6', 's7'];
+            const timings = [4000, 6000, 7000, 7000, 7000, 0, 20000]; // Stage 6 (Index 5) has 0 timing to stop
+            
+            function next() {
+                if (sequenceStep >= stages.length) return;
+
+                // Stop at Form (Stage 6)
+                if (sequenceStep === 5 && !isFormSubmitted) {
+                    stages.forEach(id => document.getElementById(id).classList.remove('active'));
+                    document.getElementById(stages[5]).classList.add('active');
+                    return; 
+                }
+
+                stages.forEach(id => document.getElementById(id).classList.remove('active'));
+                document.getElementById(stages[sequenceStep]).classList.add('active');
+
+                if (timings[sequenceStep] > 0) {
+                    setTimeout(() => {
+                        sequenceStep++;
+                        next();
+                    }, timings[sequenceStep]);
+                }
+            }
+            next();
+
+            window.finishForm = () => {
+                sequenceStep = 6;
+                next();
+            };
+        }
+
+        function prepareAudio(base64) {
+            const binary = atob(base64);
+            const bytes = new Int16Array(binary.length / 2);
+            for (let i = 0; i < binary.length; i += 2) {
+                bytes[i / 2] = (binary.charCodeAt(i + 1) << 8) | binary.charCodeAt(i);
+            }
+            
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            const buffer = audioCtx.createBuffer(1, bytes.length, 24000);
+            buffer.getChannelData(0).set(Array.from(bytes).map(v => v / 32768));
+            
+            document.getElementById('audio-toggle').onclick = function() {
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+                const source = audioCtx.createBufferSource();
+                source.buffer = buffer;
+                source.connect(audioCtx.destination);
+                source.start();
+                this.classList.add('pink-gradient');
+            };
+        }
+
+        document.getElementById('enquiry-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            btn.innerText = "Submitting...";
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                isFormSubmitted = true;
+                document.getElementById('success-overlay').classList.remove('hidden');
+                setTimeout(() => window.finishForm(), 2500);
+            }, 1200);
+        });
+
+        window.onload = initAd;
+    </script>
+</body>
+</html>

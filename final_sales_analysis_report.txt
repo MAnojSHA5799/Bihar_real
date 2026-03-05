@@ -1,0 +1,44 @@
+
+================ REAL ESTATE SALES ANALYSIS REPORT ================
+
+Total Positive Reviews: 13
+Total Negative Reviews: 10
+
+THEORETICAL BASIS:
+
+1. Trust-Based Purchase Theory:
+Real estate is a high-value decision. Buyers require legal clarity,
+transparent pricing, and timely possession. Financial complaints and
+refund disputes increase perceived risk and reduce purchase intention.
+
+2. Financial Risk & Loss Aversion:
+Middle-income buyers depend on home loans. Project delays create EMI
+burden and financial stress. Hidden charges reduce trust and negatively
+impact word-of-mouth reputation.
+
+3. SERVQUAL Service Quality Model:
+Sales improve when reliability, responsiveness, assurance, and
+construction quality are maintained. Delays and poor workmanship
+reduce reliability perception.
+
+ROOT CAUSES OF SALES DECLINE:
+- Project delays
+- Incomplete work
+- Refund disputes
+- Extra hidden charges
+- Damp walls & quality issues
+
+KEY DRIVERS OF SALES GROWTH:
+- Value for money pricing
+- Professional team behavior
+- Eco-friendly branding
+- High-quality materials
+- Strong location advantage
+
+CONCLUSION:
+Sales probability directly depends on Trust Score and Risk Score.
+Reducing financial disputes, improving construction quality,
+and ensuring transparent communication can significantly
+increase future sales performance.
+
+====================================================================

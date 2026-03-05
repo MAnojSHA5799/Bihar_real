@@ -1,0 +1,4 @@
+Promoter Name,Sentiment Score,Financial Issue Flag,Delay Flag,Quality Flag,Trust Flag,Trust Score (0-100),Risk Score,Sales Probability (%)
+A ONE BUILDERS DEVELOPERS,0.0,2,1,1,1,-20.0,4,80
+PARI CONSTRUCTION AND DEVELOPER,0.25,1,2,0,1,-10.0,3,85
+R.D.ECO DEVELOPERS PVT. LTD.,0.75,1,0,2,2,0.0,3,85
