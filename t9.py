@@ -62,8 +62,8 @@ class BiharAutoIntelligence:
         df = df.drop_duplicates(subset=['Company_Name', 'City'])
         
         # Files Save karein
-        df.to_csv('bihar_all_car_dealers.csv', index=False)
-        df.to_excel('bihar_all_car_dealers.xlsx', index=False)
+        df.to_csv('bihar_all_car_dealers11.csv', index=False)
+        df.to_excel('bihar_all_car_dealers11.xlsx', index=False)
         
         print(f"\n✅ Success! {len(df)} Dealers ka structure ready hai.")
         print("📊 District-wise Data Summary saved to 'bihar_all_car_dealers.xlsx'")
